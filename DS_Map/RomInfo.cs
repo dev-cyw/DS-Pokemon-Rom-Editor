@@ -1014,7 +1014,7 @@ namespace DSPRE
                     break;
 
                 case GameFamilies.Plat:
-                    itemNamesTextNumber = 392;
+                    itemNamesTextNumber = gameLanguage == GameLanguages.Japanese ? 390 : 392;
                     break;
 
                 default:

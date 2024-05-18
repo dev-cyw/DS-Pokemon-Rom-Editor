@@ -29,11 +29,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.LevelCB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ItemCB = new System.Windows.Forms.ComboBox();
             this.OtherMartsTAB = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.AltMartItemCB = new System.Windows.Forms.ComboBox();
             this.MainMartLB = new DSPRE.ListBox2();
+            this.MartLB = new DSPRE.ListBox2();
+            this.MainItemCB = new System.Windows.Forms.ComboBox();
             this.Tabs.SuspendLayout();
             this.MainMartTAB.SuspendLayout();
+            this.OtherMartsTAB.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tabs
@@ -52,7 +57,7 @@
             this.MainMartTAB.Controls.Add(this.label2);
             this.MainMartTAB.Controls.Add(this.LevelCB);
             this.MainMartTAB.Controls.Add(this.label1);
-            this.MainMartTAB.Controls.Add(this.ItemCB);
+            this.MainMartTAB.Controls.Add(this.MainItemCB);
             this.MainMartTAB.Controls.Add(this.MainMartLB);
             this.MainMartTAB.Location = new System.Drawing.Point(4, 22);
             this.MainMartTAB.Name = "MainMartTAB";
@@ -80,9 +85,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(137, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Level";
+            this.label2.Text = "Requirement";
             // 
             // LevelCB
             // 
@@ -103,17 +108,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Item";
             // 
-            // ItemCB
-            // 
-            this.ItemCB.FormattingEnabled = true;
-            this.ItemCB.Location = new System.Drawing.Point(6, 18);
-            this.ItemCB.Name = "ItemCB";
-            this.ItemCB.Size = new System.Drawing.Size(113, 21);
-            this.ItemCB.TabIndex = 1;
-            this.ItemCB.SelectedIndexChanged += new System.EventHandler(this.ItemCB_SelectedIndexChanged);
-            // 
             // OtherMartsTAB
             // 
+            this.OtherMartsTAB.Controls.Add(this.button1);
+            this.OtherMartsTAB.Controls.Add(this.label3);
+            this.OtherMartsTAB.Controls.Add(this.AltMartItemCB);
+            this.OtherMartsTAB.Controls.Add(this.MartLB);
             this.OtherMartsTAB.Location = new System.Drawing.Point(4, 22);
             this.OtherMartsTAB.Name = "OtherMartsTAB";
             this.OtherMartsTAB.Padding = new System.Windows.Forms.Padding(3);
@@ -121,6 +121,35 @@
             this.OtherMartsTAB.TabIndex = 1;
             this.OtherMartsTAB.Text = "Other Marts";
             this.OtherMartsTAB.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::DSPRE.Properties.Resources.saveButton;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(239, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Save";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 2);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Item";
+            // 
+            // AltMartItemCB
+            // 
+            this.AltMartItemCB.FormattingEnabled = true;
+            this.AltMartItemCB.Location = new System.Drawing.Point(6, 18);
+            this.AltMartItemCB.Name = "AltMartItemCB";
+            this.AltMartItemCB.Size = new System.Drawing.Size(116, 21);
+            this.AltMartItemCB.TabIndex = 3;
             // 
             // MainMartLB
             // 
@@ -130,6 +159,25 @@
             this.MainMartLB.Size = new System.Drawing.Size(307, 108);
             this.MainMartLB.TabIndex = 0;
             this.MainMartLB.SelectedIndexChanged += new System.EventHandler(this.MainMartLB_SelectedIndexChanged);
+            // 
+            // MartLB
+            // 
+            this.MartLB.FormattingEnabled = true;
+            this.MartLB.Location = new System.Drawing.Point(6, 45);
+            this.MartLB.Name = "MartLB";
+            this.MartLB.Size = new System.Drawing.Size(307, 108);
+            this.MartLB.TabIndex = 1;
+            // 
+            // MainItemCB
+            // 
+            this.MainItemCB.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.MainItemCB.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.MainItemCB.FormattingEnabled = true;
+            this.MainItemCB.Location = new System.Drawing.Point(6, 18);
+            this.MainItemCB.Name = "MainItemCB";
+            this.MainItemCB.Size = new System.Drawing.Size(126, 21);
+            this.MainItemCB.TabIndex = 1;
+            this.MainItemCB.SelectedIndexChanged += new System.EventHandler(this.ItemCB_SelectedIndexChanged);
             // 
             // MartEditor
             // 
@@ -146,6 +194,8 @@
             this.Tabs.ResumeLayout(false);
             this.MainMartTAB.ResumeLayout(false);
             this.MainMartTAB.PerformLayout();
+            this.OtherMartsTAB.ResumeLayout(false);
+            this.OtherMartsTAB.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -156,10 +206,14 @@
         private System.Windows.Forms.TabPage MainMartTAB;
         private System.Windows.Forms.ComboBox LevelCB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox ItemCB;
         private ListBox2 MainMartLB;
         private System.Windows.Forms.TabPage OtherMartsTAB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button MainMartSaveBTN;
+        private ListBox2 MartLB;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox AltMartItemCB;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox MainItemCB;
     }
 }
