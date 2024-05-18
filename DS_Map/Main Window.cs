@@ -690,6 +690,7 @@ namespace DSPRE {
             spawnEditorToolStripButton.Enabled = true;
             spawnEditorToolStripMenuItem.Enabled = true;
             monEditorToolStripMenuItem.Enabled = true;
+            miscEditorsToolStripMenuItem.Enabled = true;
 
             scriptCommandsButton.Enabled = true;
             if(RomInfo.gameFamily == RomInfo.GameFamilies.Plat || RomInfo.gameFamily == RomInfo.GameFamilies.DP)
@@ -9865,6 +9866,19 @@ namespace DSPRE {
 
         private void evolutionsEditorToolStripMenuItem_Click(object sender, EventArgs e) {
             // Dummy func, to be deleted from MainWIndow
+        }
+
+        private void martEditorToolStripMenuItem_Click(object sender, EventArgs e) {
+            string[] itemNames = RomInfo.GetItemNames();
+
+            Helpers.statusLabelMessage("Setting up Mart Editor...");
+            Update();
+
+            MartEditor Mart = new MartEditor(itemNames);
+            Mart.ShowDialog();
+
+            Helpers.statusLabelMessage();
+            Update();
         }
     }
 }

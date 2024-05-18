@@ -179,6 +179,12 @@
     <Compile Include="LearnsetEditor.designer.cs">
       <DependentUpon>LearnsetEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="MartEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MartEditor.Designer.cs">
+      <DependentUpon>MartEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonalDataEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LearnsetEditor.resx">
       <DependentUpon>LearnsetEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MartEditor.resx">
+      <DependentUpon>MartEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonalDataEditor.resx">
       <DependentUpon>PersonalDataEditor.cs</DependentUpon>
