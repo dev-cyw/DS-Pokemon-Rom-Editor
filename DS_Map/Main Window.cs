@@ -690,6 +690,8 @@ namespace DSPRE {
             spawnEditorToolStripButton.Enabled = true;
             spawnEditorToolStripMenuItem.Enabled = true;
             monEditorToolStripMenuItem.Enabled = true;
+            miscEditorsToolStripMenuItem.Enabled = true;
+
 
             scriptCommandsButton.Enabled = true;
             if (!RomInfo.gameFamily.Equals(GameFamilies.HGSS)) {
@@ -9891,6 +9893,18 @@ namespace DSPRE {
             Update();
             OverlayEditor ovlEditor = new OverlayEditor();
             ovlEditor.ShowDialog();
+
+            Helpers.statusLabelMessage();
+            Update();
+        }
+
+        private void martEditorToolStripMenuItem_Click(object sender, EventArgs e) {
+            string[] itemnames = RomInfo.GetItemNames();
+
+            Helpers.statusLabelMessage("Setting up Mart Editor...");
+            Update();
+            MartEditor martEditor = new MartEditor(itemnames);
+            martEditor.ShowDialog();
 
             Helpers.statusLabelMessage();
             Update();

@@ -184,6 +184,12 @@
     <Compile Include="LearnsetEditor.designer.cs">
       <DependentUpon>LearnsetEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="MartEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MartEditor.Designer.cs">
+      <DependentUpon>MartEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="MessageEnc\EncryptText.cs" />
     <Compile Include="MoveEditor.cs">
       <SubType>Form</SubType>
@@ -411,6 +417,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LearnsetEditor.resx">
       <DependentUpon>LearnsetEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MartEditor.resx">
+      <DependentUpon>MartEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OverlayEditor.resx">
       <DependentUpon>OverlayEditor.cs</DependentUpon>
