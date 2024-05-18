@@ -690,7 +690,7 @@ namespace DSPRE {
             spawnEditorToolStripButton.Enabled = true;
             spawnEditorToolStripMenuItem.Enabled = true;
             monEditorToolStripMenuItem.Enabled = true;
-            miscEditorsToolStripMenuItem.Enabled = true;
+            martEditorToolStripMenuItem.Enabled = true;
 
 
             scriptCommandsButton.Enabled = true;
